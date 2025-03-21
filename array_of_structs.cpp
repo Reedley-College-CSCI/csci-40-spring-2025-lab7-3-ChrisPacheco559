@@ -6,14 +6,14 @@ struct TemperatureRecord {
     int day;
     int temperature;
 };  // TODO: Step 1 - Define the struct TemperatureRecord
-  // It should contain two integer fields: day and temperature.
+// It should contain two integer fields: day and temperature.
 
 
 // Constants
 const int MAX_DAYS = 31;
 
 // Function Prototypes
-void readTemperatures(int&,TemperatureRecord[]); // TODO: Fix the parameters
+void readTemperatures(int&, TemperatureRecord[]); // TODO: Fix the parameters
 void printTemperatures(const TemperatureRecord[], int);
 //TemperatureRecord findMin(const ???); 
 //TemperatureRecord findMax(const ???);
@@ -21,7 +21,7 @@ double findAverage(const TemperatureRecord[], int);
 
 int main() {
     TemperatureRecord tempDays[MAX_DAYS];// TODO: Step 2 - Declare an array of TemperatureRecord structs (MAX_DAYS size)
-    
+
     int size = 0;  // Actual number of records read
 
     // TODO: Step 3 - Call readTemperatures() to load data from file
@@ -29,8 +29,8 @@ int main() {
     // TODO: Step 4 - Print the temperatures
     printTemperatures(tempDays, size);
     // TODO: Step 5 - Compute and display min, max, and average temperature
-    double averageTemp = findAverage(tempDays, size)
-        cout << "The average temperature is " << averageTemp << endl;
+    double averageTemp = findAverage(tempDays, size);
+    cout << "The average temperature is " << averageTemp << endl;
 
     return 0;
 }
@@ -50,7 +50,7 @@ void readTemperatures(int& size, TemperatureRecord temp[]) {
 void printTemperatures(const TemperatureRecord temp[], int size) {
     cout << "Day " << " Temp" << endl;
     for (int i = 0; i < size; ++i) {
-        cout << temp[size].day << " " << temp[size].temperature << endl;
+        cout << temp[i].day << "    " << temp[i].temperature << endl;
     }
 }
 
