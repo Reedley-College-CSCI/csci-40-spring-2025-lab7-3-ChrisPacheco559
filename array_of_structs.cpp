@@ -27,7 +27,7 @@ int main() {
     // TODO: Step 3 - Call readTemperatures() to load data from file
     readTemperatures(size, tempDays);
     // TODO: Step 4 - Print the temperatures
-
+     printTemperatures(tempDays, size);
     // TODO: Step 5 - Compute and display min, max, and average temperature
 
     return 0;
@@ -45,6 +45,12 @@ void readTemperatures(int& size, TemperatureRecord temp[]) {
 
 // TODO: Step 7 - Implement printTemperatures()
 // Print all stored temperatures in a formatted table
+void printTemperatures(const TemperatureRecord temp[], int size) {
+    cout << "Day " << " Temp" << endl;
+    for (int i = 0; i < size; ++i) {
+        cout << temp[size].day << " " << temp[size].temperature << endl;
+    }
+}
 
 // TODO: Step 8 - Implement findMin()
 // Return the TemperatureRecord with the lowest temperature
