@@ -27,8 +27,9 @@ int main() {
     // TODO: Step 3 - Call readTemperatures() to load data from file
     readTemperatures(size, tempDays);
     // TODO: Step 4 - Print the temperatures
-     printTemperatures(tempDays, size);
+    printTemperatures(tempDays, size);
     // TODO: Step 5 - Compute and display min, max, and average temperature
+    double averageTemp = findAverage(tempDays, size)
 
     return 0;
 }
@@ -60,3 +61,10 @@ void printTemperatures(const TemperatureRecord temp[], int size) {
 
 // TODO: Step 10 - Implement findAverage()
 // Compute and return the average temperature
+double findAverage(const TemperatureRecord temp[], int size) {
+    float sum = 0;
+    for (int i = 0; i < size; ++i) {
+        sum += temp[i].temperature;
+    }
+    return sum / size;
+}
