@@ -30,6 +30,7 @@ int main() {
     printTemperatures(tempDays, size);
     // TODO: Step 5 - Compute and display min, max, and average temperature
     double averageTemp = findAverage(tempDays, size)
+        cout << "The average temperature is " << averageTemp << endl;
 
     return 0;
 }
